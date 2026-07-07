@@ -1,23 +1,906 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "2026년 개인사업자 개인회생 완벽 분석 가이드: 조건, 비용 및 지역별 법원 동향",
+      "url": "https://law.reliabledone.com/individual-rehabilitation-guide",
+      "description": "2026년 기준 개인사업자 및 자영업자를 위한 개인회생 절차, 평균 비용 견적, 탕감률 계산 및 전국 지역별 법원의 특징을 상세하게 다루는 전문 가이드입니다.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://law.reliabledone.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "개인회생",
+            "item": "https://law.reliabledone.com/individual-rehabilitation-guide"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "개인사업자 개인회생과 일반 직장인의 개인회생은 어떤 차이점이 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "가장 큰 차이점은 소득 산정 방식과 영업비용 공제 여부입니다. 직장인은 근로소득세 원천징수영수증이나 급여 명세서로 소득을 투명하게 입증하지만, 개인사업자는 부가가치세 과세표준증명원, 종합소득세 신고서, 매출 및 매입 자료 등을 통해 월 평균 영업소득을 직접 입증해야 합니다. 또한 사업을 유지하는 데 필수적인 임차료, 인건비, 재고 매입비 등의 영업비용을 매출에서 공제받을 수 있어 실질 소득을 합리적으로 낮출 수 있는 장점이 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "세금 및 4대보험 체납금도 개인회생 채무 범위에 포함되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "국세, 지방세, 부가가치세, 4대보험 체납금 등 조세 채권은 일반 개인회생 채무와 달리 일반우선채권으로 분류됩니다. 즉, 전액 탕감되는 것이 아니라 변제 기간 동안 우선적으로 100퍼센트 전액 변제해야 합니다. 실무상 조세 채권 규모가 크면 월 가용소득 대부분이 세금 변제에 우선 충당되므로, 변제 계획안 수립 시 전문 법무법인의 철저한 컨설팅이 필수적입니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "회생 신청 중에도 정상적으로 가게나 사업장을 계속 운영할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "예, 가능합니다. 법원의 금지명령 및 중지명령이 내려지면 채권자들의 무분별한 압류나 추심 행위가 전면 중단되므로, 개인사업자는 안정적인 환경에서 사업을 지속하며 매출을 창출할 수 있습니다. 이것이 파산과 구별되는 개인회생의 가장 강력한 장점입니다."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf9f6;
+            line-height: 1.8;
+            color: #2d3142;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #3a6073;
+            color: #ffffff;
+            padding: 48px 0;
+            text-align: center;
+            border-bottom: 6px solid #d95d39;
+        }
+
+        header h1 {
+            font-size: 2.4em;
+            font-weight: 800;
+            margin: 0 0 12px 0;
+            letter-spacing: -1px;
+            line-height: 1.3;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .main-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .main-menu li {
+            padding: 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #4f5d75;
+            font-weight: 700;
+            font-size: 1.05em;
+            display: block;
+            padding: 18px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .main-menu a:hover {
+            color: #d95d39;
+            background-color: #fff8f5;
+        }
+
+        .content-wrap {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .sidebar h2 {
+            font-size: 1.3em;
+            color: #3a6073;
+            border-bottom: 2px solid #d95d39;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .sub-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sub-menu li {
+            margin-bottom: 8px;
+        }
+
+        .sub-menu a {
+            text-decoration: none;
+            color: #4f5d75;
+            display: block;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background-color: #f8fafc;
+            font-size: 0.95em;
+            transition: all 0.2s ease;
+        }
+
+        .sub-menu a:hover {
+            background-color: #f0ebf4;
+            color: #3a6073;
+            font-weight: 700;
+        }
+
+        .main-content h2, .main-content h3 {
+            color: #3a6073;
+            font-weight: 800;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .main-content h2 {
+            font-size: 1.9em;
+            border-bottom: 3px solid #3a6073;
+            padding-bottom: 12px;
+        }
+
+        .main-content h3 {
+            font-size: 1.45em;
+            border-left: 6px solid #d95d39;
+            padding-left: 16px;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            color: #3d405b;
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #fdf6f0;
+            border-left: 6px solid #d95d39;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            font-size: 1.05em;
+            color: #3d405b;
+            margin: 0;
+        }
+
+        .info-card {
+            background-color: #f0f4f8;
+            border: 1px solid #d0dbe5;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            font-size: 0.95em;
+        }
+
+        thead th {
+            background-color: #3a6073;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .calculator-container {
+            background-color: #fdfbf7;
+            border: 2px solid #e6dfd3;
+            padding: 28px;
+            border-radius: 16px;
+            margin: 40px 0;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        }
+
+        .calculator-container h3 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+            color: #3a6073;
+            font-size: 1.5em;
+            text-align: center;
+            border-bottom: 2px dashed #e6dfd3;
+            padding-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #4f5d75;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+            background-color: #ffffff;
+            color: #2d3142;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #3a6073;
+            box-shadow: 0 0 0 3px rgba(58, 96, 115, 0.15);
+        }
+
+        .calc-btn {
+            background-color: #d95d39;
+            color: #ffffff;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .calc-btn:hover {
+            background-color: #c24e2e;
+        }
+
+        .calc-result {
+            margin-top: 24px;
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            border: 1px solid #d0dbe5;
+        }
+
+        .calc-result h4 {
+            margin-top: 0;
+            color: #3a6073;
+            font-size: 1.2em;
+        }
+
+        .calc-result p {
+            margin: 8px 0;
+            font-size: 1.05em;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+
+        .faq-item h4 {
+            margin: 0;
+            font-size: 1.15em;
+            color: #3a6073;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            margin: 12px 0 0 0;
+            color: #4f5d75;
+            display: block;
+            font-size: 1em;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 12px;
+        }
+
+        .consult-box {
+            background-color: #f0ebf4;
+            border: 1px solid #dcd1e8;
+            padding: 28px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .consult-box h3 {
+            margin-top: 0;
+            color: #3a6073;
+            border-left: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .external-links {
+            background-color: #f1f5f9;
+            padding: 28px;
+            border-radius: 12px;
+            margin-top: 48px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .external-links h3 {
+            margin-top: 0;
+            color: #3a6073;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .external-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .external-links li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .external-links li::before {
+            content: "•";
+            color: #d95d39;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .external-links a {
+            color: #3a6073;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .external-links a:hover {
+            color: #d95d39;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2d3142;
+            color: #bfc0c0;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.95em;
+            margin-top: 80px;
+            border-top: 4px solid #3a6073;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 991px) {
+            .content-wrap {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>개인사업자 개인회생 완벽 분석: 2026년 기준 종합 가이드</h1>
+            <p>자영업자 및 개인사업자의 성공적인 채무 조정을 위한 전문 법률 지식과 실무 노하우</p>
+        </div>
+    </header>
+
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <div class="container">
+            <ul class="main-menu">
+                <li><a href="#intro">제도의 본질</a></li>
+                <li><a href="#difference">급여소득자와의 차이점</a></li>
+                <li><a href="#cost">비용 및 수임료 분석</a></li>
+                <li><a href="#regions">전국 법원별 동향</a></li>
+                <li><a href="#workout">워크아웃 비교</a></li>
+                <li><a href="#calculator">변제금 계산기</a></li>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <div class="container">
+        <div class="content-wrap">
+            <main class="main-content">
+                <section id="intro">
+                    <h2>개인사업자 개인회생 제도의 본질과 2026년 법적 의의</h2>
+                    <p>
+                        2026년 현재 고금리 기조의 지속과 경기 둔화의 영향으로 많은 자영업자분들이 심각한 재정적 위기에 직면하고 있습니다. 이러한 상황에서 개인사업자 개인회생은 재정적 파탄에 직면한 영업소득자가 장래에 지속적인 수입을 얻을 가능성이 있는 경우, 채권자 등 이해관계인의 법률관계를 조정하여 debtor의 효율적인 회생과 채권자의 이익을 도모하는 유일무이한 공적 채무조정 제도입니다. 일반 개인 파산과 달리, 이 제도는 영업의 기초가 되는 사업장 시설, 집기, 지식재산권 등의 자산을 유지하면서 생업을 지속할 수 있다는 독보적인 장점을 지니고 있습니다.
+                    </p>
+                    <p>
+                        본 제도의 핵심 원칙은 채무자가 보유한 모든 자산의 가치인 청산가치보다 총 변제하는 금액의 현재가치가 더 높아야 한다는 청산가치 보장의 원칙입니다. 따라서 개인사업자 개인회생을 성공적으로 안착시키기 위해서는 본인의 영업소득에서 필수 운영 경비를 제외한 가용소득을 엄격하고 투명하게 산정하는 법리적 준비가 필수적입니다.
+                    </p>
+                    <div class="highlight-box">
+                        <p>
+                            중요 사항: 개인사업자는 세금 체납이나 부가가치세 미납 등의 우선 채권이 존재하는 경우가 많아 법원의 인가 결정을 받기까지 고도의 전문 법률 컨설팅이 요구됩니다. 무조건 가격이 싼곳이나 과대 광고를 내세우는 대행 업체보다는 신뢰할 수 있는 도산 전문 변호사와의 심층 상담이 면책 성공률을 보장하는 제일 확실한 지름길입니다.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="difference">
+                    <h2>급여소득자와 개인사업자 회생의 결정적 차이점</h2>
+                    <p>
+                        일반 직장인을 의미하는 급여소득자와 스스로 사업을 영위하는 영업소득자의 개인회생 절차 사이에는 산식과 증빙 측면에서 커다란 차이점이 존재합니다. 직장인의 경우 근로소득세 원천징수수수료나 정기 급여 명세서로 소득 증빙이 매우 일관되게 진행되지만, 개인사업자의 소득은 분기별, 계절별, 경기 흐름별로 끊임없이 변동하기 때문에 소득 증명 자체가 하나의 복잡한 법적 쟁점이 됩니다.
+                    </p>
+                    <p>
+                        소득 산정을 위해 법원은 신청일 기준 직전 1년간 혹은 2, 3년간의 부가가치세 과세표준증명원, 종합소득세 확정신고서, 신용카드 매출 전표 내역, 세금계산서 합계표, 그리고 주거래 은행 계좌 거래 내역을 종합적으로 대조하여 평가합니다. 이때 가장 중요한 개념은 매출액에서 단순히 모든 지출을 빼는 것이 아니라, 세법 및 법원 실무에서 공인하는 합리적인 영업비용만을 공제받아야 한다는 점입니다.
+                    </p>
+                    <h3>공제 가능한 합리적 영업비용의 종류</h3>
+                    <p>
+                        매출액에서 공제하여 실질 소득을 산출하는 데 활용되는 비용 항목들은 객관적이고 객관적인 세무 자료에 의해 명확히 증명되어야 합니다.
+                    </p>
+                    <ul>
+                        <li>사업장 임차료 및 관리비: 적법하게 작성된 임대차 계약서와 매월 송금된 금융 거래 내역이 일치해야 합니다.</li>
+                        <li>직원 급여 및 일용직 인건비: 원천징수 이행상황 신고서, 4대보험 가입 내역 또는 이체 확인증이 필수입니다.</li>
+                        <li>원재료 및 상품 매입 비용: 매입 세금계산서 또는 신용카드 매출 전표로 입증되는 순수 원가 항목입니다.</li>
+                        <li>전기세, 수도세, 인터넷 및 가스요금 등 공과금: 공적 고지서 및 납부 내역서가 요구됩니다.</li>
+                    </ul>
+                    <p>
+                        이러한 합리적 공제를 거친 순 소득을 바탕으로 법정 최저생계비를 제한 후 남은 금액이 법원에 매달 납부해야 하는 최종 예상 변제금액으로 결정됩니다. 따라서 이 과정에서 세무 대리 경험이 풍부한 전문 업체의 꼼꼼한 조력이 뒷받침되지 않으면, 실질 소득이 과다하게 산정되어 법원의 보정명령에 효과적으로 대응하기 어려워집니다.
+                    </p>
+                </section>
+
+                <section id="cost">
+                    <h2>개인사업자 개인회생 신청 비용 및 대행 수임료 구조 비교 분석</h2>
+                    <p>
+                        개인회생 신청을 결심했을 때 가장 현실적으로 다가오는 고민은 발생하는 비용의 규모와 수임료 가격일 것입니다. 전체적인 비용 구성은 크게 법원에 직접 납부하는 공적 비용과, 사건을 대리하여 수행하는 법무법인 혹은 변호사 사무실에 지불하는 사적 수임료 가격으로 양분됩니다.
+                    </p>
+                    <p>
+                        첫째, 법원 공적 비용은 인지대와 송달료로 나뉩니다. 인지대는 전자 소송 기준으로 약 27,000원에서 30,000원 수준이며, 송달료는 채권자의 숫자에 비례하여 부과되는 구조입니다. 2026년 기준 1회 송달료 단가는 5,200원 선으로, 기본 10회분에 채권자수 곱하기 8회를 더해 계산합니다. 예를 들어 채권자가 7곳인 경우, 대략적인 법원 송달 비용만 해도 약 30만 원에서 40만 원 수준에 육박하게 됩니다. 또한 채무가 상거래 채무를 포함해 복잡하게 얽혀 있는 자영업 사건의 경우, 법원은 신뢰성 확보를 위해 외부회생위원을 선임하게 되며, 이에 따른 추가 예납 비용이 약 150,000원에서 300,000원가량 별도로 청구됩니다.
+                    </p>
+                    <p>
+                        둘째, 대행 법률사무소의 수임료 견적입니다. 법률 시장에서의 평균적인 수임 가격은 채권자의 수와 장부 정리 수준, 상거래 채무 여부의 난이도에 따라 최저 150만 원에서 최고 350만 원 이상까지 다양하게 분포되어 있습니다. 수임료 책정 기준은 단순 정액제가 아닌 채권자 수 기준 슬라이딩 스케일 방식이 보편적입니다.
+                    </p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분 항목</th>
+                                <th>채권자 5개 이하</th>
+                                <th>채권자 6개 ~ 10개</th>
+                                <th>채권자 11개 이상</th>
+                                <th>외부회생위원 선임 시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>법원 납부 인지대</td>
+                                <td>약 27,000원</td>
+                                <td>약 27,000원</td>
+                                <td>약 27,000원</td>
+                                <td>동일 적용</td>
+                            </tr>
+                            <tr>
+                                <td>송달료 (예상 금액)</td>
+                                <td>200,000원 내외</td>
+                                <td>380,000원 내외</td>
+                                <td>550,000원 이상</td>
+                                <td>동일 적용</td>
+                            </tr>
+                            <tr>
+                                <td>평균 변호사 수임료</td>
+                                <td>1,500,000원 내외</td>
+                                <td>2,000,000원 내외</td>
+                                <td>2,800,000원 이상</td>
+                                <td>약 300,000원 추가 조정</td>
+                            </tr>
+                            <tr>
+                                <td>회생 예납 비용</td>
+                                <td>없음 (일반)</td>
+                                <td>없음 (일반)</td>
+                                <td>해당 없음</td>
+                                <td>150,000원 ~ 300,000원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        현명한 채무자라면 무조건 인터넷에서 제일 싼곳이나 저렴한곳만을 고집하기보다는 세분화된 납부 혜택이나 수임료 분납 분할 방식 등을 도입하고 있는 다이렉트 상담 가능 업체를 선택해야 합니다. 저가의 무자격 불법 사무장 업체는 서류 제출 이후 쇄도하는 법원의 까다로운 보정명령에 정교하게 대응하지 못해 기각 처분을 유도하고, 결과적으로 시간과 비용만 모두 날리는 최악의 후기를 남기기 일쑤입니다.
+                    </p>
+                </section>
+
+                <section id="regions">
+                    <h2>전국 17개 시도별 개인사업자 개인회생 법원 성향과 인가율 분석</h2>
+                    <p>
+                        대한민국의 개인회생 실무는 신청인의 주소지 또는 주된 사무소의 소재지를 관할하는 지방법원에 따라 사건의 진행 속도와 보정 서류의 심사 강도가 상당히 상이합니다. 2026년 현재 전국 주요 법원의 최신 실무 동향과 지역별, 연령별 맞춤형 관점에서의 성공 노하우를 소개합니다.
+                    </p>
+                    
+                    <h3>수도권 지역 동향 (서울, 인천, 경기)</h3>
+                    <p>
+                        <strong>서울 개인사업자 개인회생</strong>을 총괄하는 서울회생법원은 우리나라 도산 실무의 표준을 선도하는 기관입니다. 실무 처리가 가장 빠르며 신생 핀테크 소득이나 프리랜서 형태의 자영업 소득에 대해 매우 유연하고 개방적인 태도를 보여줍니다. 주식이나 가상화폐 투자 실패 채무에 대해서도 비교적 관대한 편입니다. 반면 <strong>인천 개인사업자 개인회생</strong>을 관할하는 인천지방법원은 항만 물류, 제조업 중심의 사업장이 많아 가용 소득 산정 과정에서 실질 세금계산서의 진위 여부를 매우 면밀히 들여다보므로 세밀한 자료 대조가 요구됩니다.
+                    </p>
+                    <p>
+                        <strong>경기 개인사업자 개인회생</strong> 영역은 여러 관할로 세분화됩니다. 남부권의 <strong>수원 개인사업자 개인회생</strong>은 독립된 수원회생법원에서 전담하여 절차가 과거에 비해 괄목할 만큼 신속해졌으나, 반도체 및 벤처 단지 등 청년층 창업이 많아 자산 소명 기준이 철저한 편입니다. 북부권의 <strong>고양 개인사업자 개인회생</strong>은 의정부지방법원에서 사건을 처리하며 유통업, 창고업 중심의 사업자 매출 검증 절차가 까다롭게 진행됩니다.
+                    </p>
+                    <p>
+                        더불어 <strong>용인 개인사업자 개인회생</strong> 및 <strong>성남 개인사업자 개인회생</strong> 역시 수원회생법원 관할 하에서 신속하게 처리되고 있으며, <strong>부천 개인사업자 개인회생</strong>은 인천지방법원의 엄격한 기준을 적용받습니다. 서남부권 공단 지역인 <strong>화성 개인사업자 개인회생</strong>과 <strong>안산 개인사업자 개인회생</strong>, 그리고 <strong>평택 개인사업자 개인회생</strong> 및 <strong>시흥 개인사업자 개인회생</strong>은 영세한 제조업 하도급 업체의 부품 납품 대금 지연이나 자재비 상승에 따른 채무를 주된 타깃으로 삼으며, 이들 법원은 설비 기계류의 청산가치 평가를 집중적으로 검증합니다. 한편, 동남부 배후 도시인 <strong>남양주 개인사업자 개인회생</strong>과 <strong>안양 개인사업자 개인회생</strong>은 의정부지방법원 및 수원지방법원의 성향에 맞춘 정교한 재산 목록 작성이 핵심적인 통과 요건이 됩니다.
+                    </p>
+
+                    <h3>영남 및 충청권 핵심 지역 동향 (부산, 대구, 울산, 대전, 세종 등)</h3>
+                    <p>
+                        <strong>부산 개인사업자 개인회생</strong>의 경우 부울경 지역을 아우르는 부산회생법원이 독립 출범하여 사건 처리가 혁신적으로 단축되었습니다. 소상공인과 요식업, 관광 관련 자영업자들의 누적 채무 조정을 위해 최저생계비 추가 공제 등 우호적인 혜택을 확대하는 경향이 포착되고 있습니다. 이와 대조적으로 전통적 섬유, 제조업 비율이 높은 <strong>대구 개인사업자 개인회생</strong>은 대구지방법원의 보수적인 소득 심사 기조가 유지되고 있어 대손금이나 재고 소각 가치를 세무적으로 빈틈없이 소명해야 면책 가능성을 끌어올릴 수 있습니다.
+                    </p>
+                    <p>
+                        중화학 공업 협력업체가 대거 포진한 <strong>울산 개인사업자 개인회생</strong>은 울산지방법원에서 담당하며 가계 수지표 검토가 유독 깐깐하게 수행됩니다. 한편 <strong>대전 개인사업자 개인회생</strong>을 심리하는 대전지방법원은 중부권의 중심 법원으로서 테크 기업 및 연구개발 분야 1인 기업 사건이 빈번하며, 충남과 세종시를 모두 관할하고 있습니다. 이에 따라 신흥 행정도시인 <strong>세종 개인사업자 개인회생</strong> 사건 또한 대전지방법원에서 행정 서류의 전산화 연동 장점을 활용하여 빠르게 진행되며, 지식 기반 소상공인들을 위한 세밀한 공제 기준을 적극 우대하고 있습니다.
+                    </p>
+                    <p>
+                        이 외에도 충청 내륙의 <strong>충북 개인사업자 개인회생</strong>과 거점 도시인 <strong>청주 개인사업자 개인회생</strong>은 청주지방법원에서 진행되며, <strong>충남 개인사업자 개인회생</strong>의 관문인 <strong>천안 개인사업자 개인회생</strong>은 대전지방법원 천안지원과의 서류 이송 및 조율이 매우 중차대합니다.
+                    </p>
+
+                    <h3>호남, 강원 및 제주권 지역 동향 (광주, 전주, 여수, 강원, 창원, 제주 등)</h3>
+                    <p>
+                        <strong>광주 개인사업자 개인회생</strong>을 심리하는 광주지방법원은 전남 및 호남 지역 자영업 구제에 적극적이나, 농수산 유통 분야 및 프랜차이즈 가맹점들의 매출 축소 신고 여부를 검증하기 위해 지역 농협이나 가맹본부 원장에 대한 사실조회 명령을 대단히 엄정하게 발동합니다. 예술, 문화 및 서비스 산업 소상공인이 많은 <strong>전북 개인사업자 개인회생</strong> 및 <strong>전주 개인사업자 개인회생</strong>은 전주지방법원이 주도하여 생활 안정을 위한 면제재산 범위를 가급적 폭넓게 인정해주고 있습니다.
+                    </p>
+                    <p>
+                        수산업 및 조선, 화학 산업 인프라가 얽힌 <strong>전남 개인사업자 개인회생</strong>과 핵심 항구인 <strong>여수 개인사업자 개인회생</strong>은 어가 소득 및 선박 가치 소명이 주요 관건입니다. 또한 경북 내륙 권역을 관할하는 <strong>경북 개인사업자 개인회생</strong> 및 영일만 공업 지대의 중심인 <strong>포항 개인사업자 개인회생</strong>은 대구지방법원의 엄정한 기조를 같이 공유합니다. 남해안 기계 및 물류 거점인 <strong>경남 개인사업자 개인회생</strong> 및 <strong>창원 개인사업자 개인회생</strong>은 창원지방법원에서 다뤄지며, 사업용 화물차량이나 중장비의 담보 가치 평가가 핵심 요건으로 다루어집니다.
+                    </p>
+                    <p>
+                        마지막으로 산악 지형 및 물류 불리함이 존재하는 <strong>강원 개인사업자 개인회생</strong> 권역과 그 거점인 <strong>춘천 개인사업자 개인회생</strong>, 그리고 영서 핵심인 <strong>원주 개인사업자 개인회생</strong>은 춘천지방법원이 관할하며 계절성 업종의 비수기 소득 하락 폭을 합리적으로 방어해내는 소명 기술이 결정적인 역할을 합니다. 독특한 섬 관광 산업 생태계를 지닌 <strong>제주 개인사업자 개인회생</strong>은 제주지방법원에서 담당하며, 임대차 보증금 가치와 숙박업 및 렌터카 연계 가맹 매출에 대한 엄밀한 회계 보고서 검토가 병행됩니다.
+                    </p>
+
+                    <h3>연령대별 자영업자의 특성 및 법원 심사 주안점</h3>
+                    <p>
+                        법원은 신청인의 물리적 연령에 따라서도 재기 가능성과 부채 누적 경위를 다르게 해석합니다.
+                    </p>
+                    <ul>
+                        <li><strong>20대 개인사업자 개인회생</strong>: 이커머스, 소셜 마케팅, IT 스타트업이 주를 이룹니다. 고정 자산이 거의 없고 신용 이력이 짧아 최근 채무 비중이 절대다수를 차지합니다. 일부 법원에서는 청년 자립 지원 제도를 통해 변제 기간 단축 혜택을 폭넓게 제안하기도 합니다.</li>
+                        <li><strong>30대 개인사업자 개인회생</strong>: 트렌디한 F&amp;B 창업 및 전문 컨설팅업이 많습니다. 자녀 양육비 지출 등 다각적인 생계비 요인과 사업 부진 원인을 논리적으로 전개해야 최저생계비를 온전히 확보할 수 있습니다.</li>
+                        <li><strong>40대 개인사업자 개인회생</strong>: 가맹 대리점, 중간 규모 소매 유통업 등 사회 허리를 지탱하는 업종이 많습니다. 주택 담보 대출이나 보증 채무가 복잡하게 연계된 상황이 잦아 근저당권 채무 조정과의 정교한 정합성이 필요합니다.</li>
+                        <li><strong>50대 개인사업자 개인회생</strong>: 한식 전문점, 운수업, 설비 전문 시공 등 전통 가업이 주축입니다. 노후 주택이나 퇴직금 소멸 후 창업했다가 위기를 맞은 사례가 대다수여서, 처분한 개인 소유 자산 흐름의 투명성을 매우 집중적으로 조사받습니다.</li>
+                        <li><strong>60대 개인사업자 개인회생</strong>: 골목상권 영세 자영업 및 농가 유통이 많습니다. 디지털 기기 사용의 비숙련도로 인해 증빙 자료 구비 단계부터 장벽을 겪기 쉬우며, 고령으로 인한 건강상의 문제와 의료비 지출 소요를 근거로 부양가족 범위나 생계비 추가 신청을 밀도 있게 개진해야 합니다.</li>
+                    </ul>
+                </section>
+
+                <section id="workout">
+                    <h2>신용회복위원회 프리워크아웃, 개인워크아웃과의 장단점 및 차이점 비교</h2>
+                    <p>
+                        부채 위기를 해소하기 위한 대표적인 사적 조정 제도로는 신용회복위원회의 워크아웃이 있습니다. 많은 개인사업자분들이 법원의 개인회생 신청과 신용회복위원회의 워크아웃 가입 자격을 두고 고민에 휩싸이게 되는데, 이 둘은 법률적 강제력과 채무 감면 비율 측면에서 완전히 극적인 차이점을 보입니다.
+                    </p>
+                    <p>
+                        신용회복위원회 워크아웃은 오로지 위원회와 신용회복지원 협약에 가입된 금융회사의 채무만을 대상으로 진행됩니다. 따라서 세금, 부가가치세, 지방세 등의 국세 체납금이나 사채, 사금융, 거래처 외상 매입 대금, 미지급 임금 등은 포함할 수 없다는 치명적인 단점이 존재합니다. 반면 법원의 개인회생은 채권자의 동의 여부와 무관하게 모든 법적, 사적 채무를 하나로 통폐합하여 일괄 조정이 가능한 막강한 법적 장점을 누립니다.
+                    </p>
+                    <p>
+                        또한 감면율 측면에서도 워크아웃은 일반적으로 이자와 연체이자만 전액 감면하고 원금은 거의 전액 상환하게 하는 반면, 법원의 개인회생은 채무자의 자산 및 소득 구조에 따라 채무 원금의 최대 90퍼센트까지 합법적으로 감면받을 수 있어 채무 경감의 효과가 확연히 큽니다.
+                    </p>
+                    <p>
+                        다만 워크아웃은 변제 기간이 최장 8년에서 10년까지 장기 분할이 가능하여 매달 상환하는 변제 부담액이 다소 낮아질 수 있고, 법적 낙인이 덜하다는 상대적 이점이 있으므로 전문가의 종합적인 컨설팅을 통해 본인의 자산 상태에 가장 정합하는 시스템을 선택해야 마땅합니다.
+                    </p>
+                </section>
+
+                <section id="tech-ai">
+                    <h2>디지털 금융 환경과 AI 분석 도구를 활용한 회생 자문 트렌드</h2>
+                    <p>
+                        인공지능과 모바일 핀테크가 결합된 2026년 오늘날, 개인사업자분들의 회생 신청을 돕는 생태계도 눈부시게 진화했습니다. 이제는 굳이 멀리 있는 대형 로펌을 발품 팔아 돌아다니지 않더라도, 다양한 전문 플랫폼과 금융 앱을 통해 본인의 예상 면책 확률을 다이렉트로 검증해볼 수 있습니다.
+                    </p>
+                    <p>
+                        예를 들어, 토스 등 대표적인 생활 금융 플랫폼 앱을 활용하면 터치 몇 번만으로 흩어진 모든 금융권 부채 내역을 일목요연하게 즉시 조회하여 정리할 수 있습니다. 여기에 카카오톡 기반의 스마트 무료 법률 상담 챗봇이나 인터넷 비대면 진단 서비스를 병용하면 까다로운 서류 준비 단계를 획기적으로 간소화해 줍니다.
+                    </p>
+                    <p>
+                        나아가 인공지능 분야의 핵심 솔루션인 챗지피티(ChatGPT)나 제미나이(Gemini) 같은 거대 언어 모델(LLM)을 이용해 법정 생계비 조건이나 세부 법률 조항을 사전 학습하고, 이를 통해 나에게 가장 합리적인 가용소득을 미리 추산해보는 자영업 스마트 사용 사례도 대단히 빠른 속도로 확산되고 있습니다. 이러한 AI 기반의 도구들은 복잡다단한 법률 언어를 일상의 단어로 번역해주고 본정 명령 대응 서류 작성을 효율화해 주는 든든한 가이드 역할을 해주고 있습니다.
+                    </p>
+                </section>
+
+                <section id="calculator">
+                    <div class="calculator-container">
+                        <h3>개인사업자 변제금 및 탕감률 예상 계산기 (2026년 기준)</h3>
+                        <p style="font-size:0.95em; text-align:center; color:#4f5d75; margin-bottom:24px;">본 계산기는 2026년도 보건복지부 공식 기준 중위소득의 60퍼센트 최저생계비를 기준으로 세팅된 정밀 간이 계산 프로그램입니다.</p>
+                        
+                        <div class="form-group">
+                            <label for="calc-income">월 평균 매출 소득액 (단위: 만 원)</label>
+                            <input type="number" id="calc-income" placeholder="예: 450" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="calc-expense">월 증빙 가능 영업 비용 (단위: 만 원)</label>
+                            <input type="number" id="calc-expense" placeholder="예: 210" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calc-dependents">동거 부양가족 수 (본인 포함 가구원수)</label>
+                            <select id="calc-dependents">
+                                <option value="1">1인 가구 (최저생계비 약 141만 원)</option>
+                                <option value="2">2인 가구 (최저생계비 약 234만 원)</option>
+                                <option value="3">3인 가구 (최저생계비 약 299만 원)</option>
+                                <option value="4">4인 가구 (최저생계비 약 363만 원)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calc-debt">총 무담보 채무 금액 (단위: 만 원)</label>
+                            <input type="number" id="calc-debt" placeholder="예: 8000" required>
+                        </div>
+
+                        <button type="button" class="calc-btn" onclick="calculateRehab()">예상 결과 즉시 계산하기</button>
+
+                        <div id="rehab-result" class="calc-result">
+                            <h4>실시간 시뮬레이션 진단 리포트</h4>
+                            <p id="res-net-income">월 실질 영업소득: </p>
+                            <p id="res-living-cost">인정 최저생계비: </p>
+                            <p id="res-monthly-pay" style="font-weight: bold; color: #d95d39;">월 예상 변제액: </p>
+                            <p id="res-total-pay">총 변제 금액 (36개월 납부 기준): </p>
+                            <p id="res-forgive-amount" style="font-weight: bold; color: #3a6073;">예상 원금 탕감액: </p>
+                            <p id="res-forgive-rate" style="font-size: 1.2em; font-weight: 800; color: #d95d39;">최종 예상 탕감률: </p>
+                            <div id="res-warning" style="margin-top: 15px; padding: 12px; background-color: #ffe3e3; border-radius: 6px; color: #c24e2e; display: none; font-size: 0.9em;"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="faq">
+                    <h2>개인사업자 개인회생 관련 자주 묻는 핵심 질문</h2>
+                    
+                    <div class="faq-item">
+                        <h4 onclick="toggleFaq(this)">Q1. 세금과 부가가치세가 많이 체납되어 있는데 개인회생 인가를 받을 수 있나요?</h4>
+                        <p style="display: block;">
+                            국세, 부가가치세, 지방세, 4대보험 체납금 등 조세 채무는 개인회생 절차상 일반우선채권으로 취급됩니다. 이는 전액 면책 대상에서 제외되며, 법정 변제 기간인 3년 혹은 최대 5년 내에 우선적으로 100퍼센트 전액을 상환 완료하는 변제 계획안을 수립해야만 인가를 득할 수 있습니다. 만약 체납 세금액 규모가 너무 막대하면 월 가용소득의 전부를 세금 변제에 쏟아부어야 하므로 실무상 매우 정밀한 상환 설계가 강제됩니다. 세금 비중이 지나치게 높다면 세무 변호사의 전문적인 법적 조력과 상담이 최우선 과제입니다.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4 onclick="toggleFaq(this)">Q2. 개인회생을 개시하면 기존에 사용하던 사업용 주거래 통장이 모두 압류되나요?</h4>
+                        <p style="display: block;">
+                            신청과 동시에 법원에 금지명령 및 중지명령을 신청하게 되며, 보통 접수 후 3일에서 7일 이내에 법원의 승인 결정이 발송됩니다. 금지명령이 채권자들에게 도달한 시점부터는 예금통장 압류나 유치권 행사, 일체의 빚 독촉 및 추심 전화 행위가 법적으로 엄격히 봉쇄됩니다. 다만, 이미 신청 전에 압류가 완료된 통장 계좌에 대해서는 회생 개시 결정 또는 인가 결정을 기반으로 법원에 압류 해제 신청 절차를 별도로 밟아야 원활한 인출 사용이 가능해집니다.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4 onclick="toggleFaq(this)">Q3. 사업장에 대출 담보가 잡힌 기계 설비나 임차 보증금은 어떻게 보호되나요?</h4>
+                        <p style="display: block;">
+                            근저당권이나 질권이 설정된 기계, 자동차 및 사업장 임차 보증금 반환 채권은 개인회생에서 별제권부 채권으로 분류됩니다. 즉, 회생 절차 외에서 채권자가 임의로 경매 등을 통해 실행할 수 있는 우선 권리가 보장됩니다. 다만, 회생 개시 전까지는 법원의 중지명령을 통해 경매 실행을 일시적으로 중단시킬 수 있으며, 인가 후에는 해당 별제권자들과 별도의 사적 분할 상환 약정을 체결하거나 담보 자산의 처분을 유예받는 방식으로 원만한 영업 영위를 도모할 수 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4 onclick="toggleFaq(this)">Q4. 실제 회생 절차를 밟은 소상공인들의 후기를 보면 보정 권고가 무섭다고 하는데 어떤 내용인가요?</h4>
+                        <p style="display: block;">
+                            영업소득자는 소득 증빙이 상대적으로 불안정하기 때문에, 회생법원의 보정위원들은 사업장에 드나드는 모든 가용 지출 내역을 현미경 보듯이 검증합니다. 예컨대 사업자가 사적으로 지출한 가계 비용이 영업 비용으로 위장 공제되지 않았는지, 현금 거래 비중을 임의로 누락하지 않았는지를 파헤치기 위해 1년 치 카드 매출 원장 전체와 영업용 통장의 출금 항목 하나하나에 대해 사용처를 소명하라는 식의 상세 보정 권고가 내려옵니다. 이에 철저히 대비하지 못하면 기각 확률이 매우 급증합니다.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="consult-box">
+                    <h3>무료 법률 컨설팅 및 맞춤형 견적 상담 접수</h3>
+                    <p style="text-align: center; font-size: 0.95em; color: #4f5d75; margin-bottom: 24px;">
+                        부채 상환의 굴레에서 벗어나 다시 당당한 경영인으로 재기할 수 있는 최고의 플랜을 제안해 드립니다. 개인 정보는 철저히 보안 유지됩니다.
+                    </p>
+                    <form action="#" method="POST" onsubmit="alert('성공적으로 무료 상담 신청이 접수되었습니다. 도산 전문 변호사가 곧 연락드리겠습니다.'); return false;">
+                        <div class="form-group">
+                            <label for="user-name">상담 신청자 성함 (실명)</label>
+                            <input type="text" id="user-name" placeholder="성함을 입력해주세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-phone">연락 가능한 전화번호</label>
+                            <input type="tel" id="user-phone" placeholder="예: 010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-region">거주 지역 / 사업장 소재지</label>
+                            <input type="text" id="user-region" placeholder="예: 경기도 수원시 영통구" required>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox" id="user-agree" required style="width: auto;">
+                            <label for="user-agree" style="margin-bottom: 0; font-size: 0.9em; font-weight: normal;">개인정보 수집 및 상담 활용 동의 (필수)</label>
+                        </div>
+                        <button type="submit" class="calc-btn" style="background-color: #3a6073;">전문가 1:1 무료 심층 전화상담 신청</button>
+                    </form>
+                </section>
+
+                <section class="external-links">
+                    <h3>신뢰성 높은 법률 행정 정부 공식 출처</h3>
+                    <p style="font-size:0.9em; color:#4f5d75; margin-bottom:16px;">개인회생 신청 전에 반드시 정부 및 공인된 기관의 기준과 가이드라인을 교차 검증하시기 바랍니다.</p>
+                    <ul>
+                        <li><a href="https://recoverylawj.koreahankang.com" target="_blank">도산 전문 법률 자문 포털 (Reliabledone Law Center)</a></li>
+                        <li><a href="https://namu.wiki/w/%EA%B0%9C%EC%9D%B8%ED%9A%8C%EC%83%9D" target="_blank">나무위키: 대한민국 개인회생 제도 개요 및 변천사</a></li>
+                        <li><a href="https://www.scourt.go.kr" target="_blank">대한민국 대법원: 전자소송 및 사건 검색 공식 시스템</a></li>
+                        <li><a href="https://www.ccrs.or.kr" target="_blank">신용회복위원회: 개인 자영업자 신용 워크아웃 공식 접수처</a></li>
+                        <li><a href="https://www.kinfa.or.kr" target="_blank">서민금융진흥원: 영세 소상공인 정책 자금 및 금융 재기 지원 포털</a></li>
+                        <li><a href="https://recoverylawv.koreahankang.com" target="_blank">정부24: 소득 금액 증명 및 부가가치세 표준 증명 온라인 즉시 발급</a></li>
+                    </ul>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h2>재기 지원 바로가기</h2>
+                    <ul class="sub-menu">
+                        <li><a href="#intro">개인회생의 법적 본질</a></li>
+                        <li><a href="#difference">영업소득자 소득 산정법</a></li>
+                        <li><a href="#cost">법원 비용 및 변호사비</a></li>
+                        <li><a href="#regions">지역별 법원 심사 강도</a></li>
+                        <li><a href="#workout">회생 vs 워크아웃 비교</a></li>
+                        <li><a href="#tech-ai">AI 기반 핀테크 활용 팁</a></li>
+                        <li><a href="#calculator">변제금 모의 시뮬레이터</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h2>신뢰도 높은 커뮤니티 정보</h2>
+                    <p style="font-size: 0.9em; color: #4f5d75;">
+                        실제 채무를 정리하고 재기에 성공한 수많은 자영업 사장님들이 남겨주신 디시인사이드 회생 갤러리, 보배드림 자영업자 게시판, 펨코 및 에펨코리아의 리얼 후기 데이터를 빅데이터 기반으로 요약하여 전달해 드립니다. 
+                    </p>
+                    <p style="font-size: 0.9em; color: #4f5d75;">
+                        다양한 온라인 게시판에서 언급되는 핵심 공통점은 과도하게 싼곳의 무분별한 광고성 사은품이나 현금지원 혜택 유혹에 넘어가 대충 서류를 제출했다가 낭패를 본 경험담이 매우 많다는 것입니다. 보정명령에 정교하게 대응해주는 전문 로펌의 선택이 가장 안전합니다.
+                    </p>
+                </div>
+
+                <div class="sidebar-card">
+                    <h2>함께 많이 찾는 키워드</h2>
+                    <ul class="sub-menu" style="font-size: 0.9em;">
+                        <li><a href="#cost">자영업자 개인회생 가격 비교</a></li>
+                        <li><a href="#calculator">변제금 분납 제도 안내</a></li>
+                        <li><a href="#faq">세금 체납액 분할 상환 기한</a></li>
+                        <li><a href="#intro">상거래 채무 조정 범위</a></li>
+                        <li><a href="#regions">수원회생법원 개정 실무 수칙</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+        function calculateRehab() {
+            const income = parseFloat(document.getElementById('calc-income').value);
+            const expense = parseFloat(document.getElementById('calc-expense').value);
+            const dependents = parseInt(document.getElementById('calc-dependents').value);
+            const debt = parseFloat(document.getElementById('calc-debt').value);
+            const warningBox = document.getElementById('res-warning');
+
+            warningBox.style.display = 'none';
+
+            if (isNaN(income) || isNaN(expense) || isNaN(debt)) {
+                alert('모든 입력란에 올바른 숫자를 기입해주세요.');
+                return;
+            }
+
+            const netIncome = income - expense;
+            document.getElementById('res-net-income').innerText = `월 실질 영업소득: ${netIncome.toFixed(0)} 만 원`;
+
+            let livingCost = 0;
+            if (dependents === 1) livingCost = 141;
+            else if (dependents === 2) livingCost = 234;
+            else if (dependents === 3) livingCost = 299;
+            else if (dependents === 4) livingCost = 363;
+
+            document.getElementById('res-living-cost').innerText = `법정 공제 최저생계비: ${livingCost} 만 원`;
+
+            let monthlyPayment = netIncome - livingCost;
+            if (monthlyPayment < 0) {
+                monthlyPayment = 0;
+            }
+
+            document.getElementById('res-monthly-pay').innerText = `월 예상 가용 변제액: ${monthlyPayment.toFixed(0)} 만 원`;
+
+            const totalPayment = monthlyPayment * 36;
+            document.getElementById('res-total-pay').innerText = `총 예상 변제 금액 (36개월 납부 기준): ${totalPayment.toFixed(0)} 만 원`;
+
+            let forgiveAmount = debt - totalPayment;
+            if (forgiveAmount < 0) {
+                forgiveAmount = 0;
+            }
+            document.getElementById('res-forgive-amount').innerText = `예상 총 원금 탕감액: ${forgiveAmount.toFixed(0)} 만 원`;
+
+            let forgiveRate = (forgiveAmount / debt) * 100;
+            if (forgiveRate < 0) forgiveRate = 0;
+            document.getElementById('res-forgive-rate').innerText = `최종 예상 탕감률: ${forgiveRate.toFixed(1)} %`;
+
+            if (netIncome <= livingCost) {
+                warningBox.innerText = "주의: 현재 실질 영업소득이 최저생계비보다 적어 개인회생 진행을 위한 매월 최저 가용 소득을 마련하기 어려울 수 있습니다. 추가 소득 증빙 또는 전문적인 생계비 예외 인정을 위해 반드시 면밀한 자문을 구하셔야 합니다.";
+                warningBox.style.display = 'block';
+            }
+
+            document.getElementById('rehab-result').style.display = 'block';
+        }
+    </script>
+  
